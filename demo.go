@@ -11,7 +11,7 @@ func main() {
 		* 用户绑定设备
 		返回数据格式 {"OpenUserId":160715,"Code":200,"Message":"成功"}
 	*/
-	result := userBind(uuid, "321")
+	result := userBind(uuid, "0")//0 改成 您系统的用户编号（自己定义）最好是数字
 	fmt.Println(result)
 	/*
 		* 获取设备状态
