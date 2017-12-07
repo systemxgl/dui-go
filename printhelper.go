@@ -32,7 +32,17 @@ func printContent(uuid string, content string, openUserId string) string {
 	data := toJson(entity)
 	return sendPost(url, data)
 }
-
+/*打印网页信息*/
+func printHtmlContent(uuid string, printUrl string, openUserId string) string {
+	var url = getUrl("/home/printhtmlcontent")
+	entity := PrintContentEntity{
+		Uuid:       uuid,
+		PrintUrl:   printUrl,
+		OpenUserId: openUserId,
+	}
+	data := toJson(entity)
+	return sendPost(url, data)
+}
 /*获取任务状态*/
 func getPrintTaskState(taskId int64) string {
 	var url = getUrl("/home/getprinttaskstate")
