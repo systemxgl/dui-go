@@ -28,6 +28,12 @@ func main() {
 	var content = "欢迎使用对对机\n测试换行"
 	var jsonContent = "[{\"Alignment\":0,\"BaseText\":\"" + stringToBase64(content) + "\",\"Bold\":0,\"FontSize\":0,\"PrintType\":0}]"
 	result = printContent(uuid, jsonContent, "0") //0改成用户设备绑定返回的OpenUserId
+	/*
+		*打印网页信息
+		返回数据格式 {"TaskId":10,"Code":200,"Message":"成功"}
+	*/
+	var printUrl = "您要打印的网页地址"   //例：http://www.open.mstching.com/print-demo.html
+	result = printHtmlContent(uuid, printUrl, "0") //0改成用户设备绑定返回的OpenUserId
 	//	/*
 	//		* 获取任务状态
 	//		返回数据格式 {"State":0,"Code":200,"Message":"成功"}
