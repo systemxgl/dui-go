@@ -26,6 +26,7 @@ func main() {
 	*/
 	//要打印的内容
 	var content = "欢迎使用对对机\n测试换行"
+	//json内容格式详见：http://www.mstching.com/home/openapi
 	var jsonContent = "[{\"Alignment\":0,\"BaseText\":\"" + stringToBase64(content) + "\",\"Bold\":0,\"FontSize\":0,\"PrintType\":0}]"
 	result = printContent(uuid, jsonContent, "0") //0改成用户设备绑定返回的OpenUserId
 	/*
